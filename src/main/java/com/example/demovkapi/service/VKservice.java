@@ -35,7 +35,7 @@ public class VKservice {
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("access_token", accessToken);
-        RequestEntity<Void> requestEntity = new RequestEntity<Void>(headers, HttpMethod.GET, URI.create("https://api.vk.com/method/friends.get?user_id=4338407&fields=bdate&v=5.68"));
+        RequestEntity<Void> requestEntity = new RequestEntity<Void>(headers, HttpMethod.GET, URI.create("https://api.vk.com/method/friends.get?user_id=4338407&access_token=403b06020d4a983a326cf4656819ee3f8dc52b31f7a4d5d044802d3268f866a17e54f8136e2bd062f8315&v=5.52\n"));
         ResponseEntity<FriendsResponseDTO> response = restTemplate.exchange(requestEntity, FriendsResponseDTO.class);
         if (response.getStatusCode().is5xxServerError())
             throw new VKBadResponseException(response.getStatusCodeValue());
