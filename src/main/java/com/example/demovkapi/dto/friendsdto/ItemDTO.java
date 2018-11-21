@@ -8,6 +8,7 @@ public class ItemDTO {
     private String firstName;
     @JsonProperty("last_name")
     private String lastName;
+    @JsonProperty("bdate")
     private String bdate;
 
 
